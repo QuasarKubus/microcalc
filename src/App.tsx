@@ -19,7 +19,7 @@ const App = () => {
     waterPercentage: number,
     cTemp: number, 
     dTemp: number) => {
-      return 1/(waterPercentage/100) * (weight * 4190 * (dTemp-cTemp))/power;
+      return 0.60 * 1/(waterPercentage/100) * (weight * 4190 * (dTemp-cTemp))/power;
   }
 
   return (

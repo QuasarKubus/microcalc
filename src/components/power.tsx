@@ -13,7 +13,7 @@ export const Power = (props: Props) => {
     return (
         <div>
             <p>Power (W)</p>
-            <input onChange={handlePowerChange} type="number" />
+            <input onChange={handlePowerChange} type="number" min="0" step="50"/>
         </div>
     )
 }

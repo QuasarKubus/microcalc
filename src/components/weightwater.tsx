@@ -17,10 +17,10 @@ export const WeightWater = (props: Props) => {
     return (
         <div>
             <p>Weight (g) </p>
-            <input onChange={handleWeightChange} type="number" />
+            <input onChange={handleWeightChange} type="number" min="0" max="500" step="50"/>
         
             <p>Water Ratio (%)</p>
-            <input onChange={handleWaterPercentageChange} type="number" />
+            <input onChange={handleWaterPercentageChange} type="number" min="0" max="100" step="5"/>
         </div>
     )
 }

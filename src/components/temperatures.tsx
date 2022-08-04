@@ -17,10 +17,10 @@ export const Temperatures = (props: Props) => {
     return (
         <div>
             <p>Current Temperature (°C)</p>
-            <input onChange={handleCTempChange} type="number" />
+            <input onChange={handleCTempChange} type="number" min="0"/>
         
             <p>Desired Temperature (°C)</p>
-            <input onChange={handleDTempChange} type="number" />
+            <input onChange={handleDTempChange} type="number" min="0"/>
         </div>
     )
 }
