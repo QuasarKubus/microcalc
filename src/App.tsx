@@ -25,6 +25,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>MicroCalc</h1>
         <Power setPower={setPower} />
         <WeightWater setWeight={setWeight} setWaterPercentage={setWaterPercentage} />
         <Temperatures setCTemp={setCTemp} setDTemp={setDTemp} />
