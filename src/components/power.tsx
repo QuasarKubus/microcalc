@@ -1,6 +1,7 @@
 import React, { ChangeEvent, useState } from "react";
 
 interface Props {
+    power: number,
     setPower: Function,
 }
 
@@ -10,10 +11,33 @@ export const Power = (props: Props) => {
         props.setPower(event.target.value as unknown as number);
     }
 
+    const handleEnergy1Click = (event: React.MouseEvent<HTMLButtonElement>) =>{
+        props.setPower(200);
+    }
+
+    const handleEnergy2Click = (event: React.MouseEvent<HTMLButtonElement>) =>{
+        props.setPower(500);
+    }
+
+    const handleEnergy3Click = (event: React.MouseEvent<HTMLButtonElement>) =>{
+        props.setPower(1000);
+    }
+
     return (
         <div>
             <p>Power (W)</p>
-            <input onChange={handlePowerChange} type="number" min="0" step="50"/>
+            <input onChange={handlePowerChange} value={props.power} type="number" min="0" step="50"/>
+            <div>
+                <button onClick={handleEnergy1Click}>
+                    <img src="energy1.png" alt="err" />
+                </button>
+                <button onClick={handleEnergy2Click}>
+                    <img src="energy2.png" alt="err" />
+                </button>
+                <button onClick={handleEnergy3Click}>
+                    <img src="energy3.png" alt="err" />
+                </button>
+            </div>
         </div>
     )
 }

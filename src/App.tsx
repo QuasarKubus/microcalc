@@ -19,16 +19,16 @@ const App = () => {
     waterPercentage: number,
     cTemp: number, 
     dTemp: number) => {
-      return 0.60 * 1/(waterPercentage/100) * (weight * 4190 * (dTemp-cTemp))/power;
+      return 0.60 * 1/(waterPercentage/100) * ((weight/1000) * 4190 * (dTemp-cTemp))/power;
   }
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>MicroCalc</h1>
-        <Power setPower={setPower} />
-        <WeightWater setWeight={setWeight} setWaterPercentage={setWaterPercentage} />
-        <Temperatures setCTemp={setCTemp} setDTemp={setDTemp} />
+        <Power power={power} setPower={setPower} />
+        <WeightWater weight={weight} setWeight={setWeight} waterPercentage={waterPercentage} setWaterPercentage={setWaterPercentage} />
+        <Temperatures cTemp={cTemp} setCTemp={setCTemp} dTemp={dTemp} setDTemp={setDTemp} />
 
         <p>{calculateTime(power, weight, waterPercentage, cTemp, dTemp)}s</p>
       </header>
