@@ -1,7 +1,8 @@
 import React, {ChangeEvent, useState} from 'react';
-import './App.css';
-import { Temperatures } from './components/temperatures';
-import { WeightWater } from './components/weightwater';
+import { DesiredTemp } from './components/desiredTemp';
+import { CurrentTemp } from './components/currentTemp';
+import { Weight } from './components/weight';
+import { WaterPercentage } from './components/waterPercentage';
 import { Power } from './components/power';
 
 const App = () => {
@@ -11,7 +12,6 @@ const App = () => {
   const [waterPercentage, setWaterPercentage] = useState(0);
   const [cTemp, setCTemp] = useState(0);
   const [dTemp, setDTemp] = useState(0);
-  
   
   const calculateTime = (
     power: number,
@@ -25,12 +25,20 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>MicroCalc</h1>
-        <Power power={power} setPower={setPower} />
-        <WeightWater weight={weight} setWeight={setWeight} waterPercentage={waterPercentage} setWaterPercentage={setWaterPercentage} />
-        <Temperatures cTemp={cTemp} setCTemp={setCTemp} dTemp={dTemp} setDTemp={setDTemp} />
-
-        <p>{calculateTime(power, weight, waterPercentage, cTemp, dTemp)}s</p>
+        <div id='calcContainer'>
+          <div className='Title'>
+            <h1>MicroCalc</h1>
+            <h3>Microwave Time Calculator</h3>
+          </div>
+          <div id='inputContainer'>
+            <Power power={power} setPower={setPower} />
+            <Weight weight={weight} setWeight={setWeight} />
+            <WaterPercentage waterPercentage={waterPercentage} setWaterPercentage={setWaterPercentage} />
+            <CurrentTemp cTemp={cTemp} setCTemp={setCTemp} />
+            <DesiredTemp  dTemp={dTemp} setDTemp={setDTemp} />
+          </div>
+          <h1>{calculateTime(power, weight, waterPercentage, cTemp, dTemp)}s</h1>
+        </div>
       </header>
     </div>
   );

@@ -1,25 +1,11 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent } from "react";
 
 interface Props {
-    weight: number,
-    setWeight: Function,
     waterPercentage: number,
     setWaterPercentage: Function
 }
 
-export const WeightWater = (props: Props) => {
-
-    const handleWeightChange = (event: ChangeEvent<HTMLInputElement>) =>{
-        props.setWeight((event.target.value as unknown as number));
-    }
-
-    const handleCupPress = (event: React.MouseEvent<HTMLButtonElement>) =>{
-        props.setWeight(200);
-    }
-
-    const handlePortionPress = (event: React.MouseEvent<HTMLButtonElement>) =>{
-        props.setWeight(350);
-    }
+export const WaterPercentage = (props: Props) => {
 
     const handleWaterPercentageChange = (event: ChangeEvent<HTMLInputElement>) =>{
         props.setWaterPercentage(event.target.value as unknown as number);
@@ -40,24 +26,11 @@ export const WeightWater = (props: Props) => {
         props.setWaterPercentage(95);
     }
 
-    return (
-        <div>
-            <p>Weight (g) </p>
-            <input onChange={handleWeightChange} value={props.weight} type="number" min="0" max="500" step="50"/>
-            <div>
-            <button onClick={handleCupPress}>
-                    <img src="cup.png" alt="err" />
-                </button>
-                <button onClick={handlePortionPress}>
-                    <img src="portion.png" alt="err" />
-                </button>
-            </div>
-
-
-            <p>Water Ratio (%)</p>
-
+    return (          
+        <div className="InputGroup">
+            <h3>Water Ratio (%)</h3>
             <input onChange={handleWaterPercentageChange} value={props.waterPercentage} type="number" min="0" max="100" step="5" list="ratio"/>
-            <div>
+            <div className="QuickClick">
                 <button onClick={handleVeggiePress}>
                     <img src="veggie.png" alt="err" />
                 </button>

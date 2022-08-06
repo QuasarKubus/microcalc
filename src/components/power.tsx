@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent } from "react";
 
 interface Props {
     power: number,
@@ -24,10 +24,10 @@ export const Power = (props: Props) => {
     }
 
     return (
-        <div>
-            <p>Power (W)</p>
+        <div className="InputGroup">
+            <h3>Power (W)</h3>
             <input onChange={handlePowerChange} value={props.power} type="number" min="0" step="50"/>
-            <div>
+            <div className="QuickClick">
                 <button onClick={handleEnergy1Click}>
                     <img src="energy1.png" alt="err" />
                 </button>

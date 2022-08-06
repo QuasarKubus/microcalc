@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+  background-color: #221d27;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+#calcContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 60vw;
+}
+
+#inputContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+input {
+  padding: 10px;
+  width: 90%;
+  text-align: center;
+  font-size: 18px;
+}
+
+button {
+  aspect-ratio: 1;
+  background-color: #2cb2c6;
+  border: #c6402c solid 5px;
+  margin: 14px 7px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.QuickClick {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px){
+  #calcContainer {
+    width: 100%;
+    max-width: none;
+  }
+}
