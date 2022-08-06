@@ -37,7 +37,7 @@ const App = () => {
             <CurrentTemp cTemp={cTemp} setCTemp={setCTemp} />
             <DesiredTemp  dTemp={dTemp} setDTemp={setDTemp} />
           </div>
-          <h1>{calculateTime(power, weight, waterPercentage, cTemp, dTemp)}s</h1>
+          <h1>{calculateTime(power, weight, waterPercentage, cTemp, dTemp).toFixed(0)}s</h1>
         </div>
       </header>
     </div>
