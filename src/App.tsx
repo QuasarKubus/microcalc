@@ -4,6 +4,7 @@ import { CurrentTemp } from './components/currentTemp';
 import { Weight } from './components/weight';
 import { WaterPercentage } from './components/waterPercentage';
 import { Power } from './components/power';
+import { MyFooter } from './components/myFooter';
 
 const App = () => {
 
@@ -46,6 +47,7 @@ const App = () => {
           </div>
           <h1>{asTime(calculateTime(power, weight, waterPercentage, cTemp, dTemp))}</h1>
         </div>
+        <MyFooter></MyFooter>
       </header>
     </div>
   );
