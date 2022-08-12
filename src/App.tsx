@@ -34,7 +34,7 @@ const App = () => {
       <header className="App-header">
         <div id='calcContainer'>
           <div className='Title'>
-            <h1>MicroCalc</h1>
+            <h1>CalcoWave</h1>
             <h3>Microwave Time Calculator</h3>
           </div>
           <div id='inputContainer'>
