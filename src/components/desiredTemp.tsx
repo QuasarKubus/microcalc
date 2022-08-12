@@ -33,15 +33,19 @@ export const DesiredTemp = (props: Props) => {
             <h3>Desired Temperature (°C)</h3>
             <div className="ValueSetter">
                 <input onChange={handleDTempChange} value={props.dTemp} type="number" min="0" step="5"/>
-                <button className="PMButton" onClick={handleDTempIncrease}>+</button>
-                <button className="PMButton" onClick={handleDTempDecrease}>-</button>
+                <button className="PMButton" onClick={handleDTempIncrease}>
+                    <img src="_Plus.svg" alt="err" />
+                </button>
+                <button className="PMButton" onClick={handleDTempDecrease}>
+                    <img src="_Minus.svg" alt="err" />
+                </button>
             </div>
             <div className="QuickClick">
                 <button onClick={handleRoom2Click}>
-                    <img src="roomtmp.png" alt="err" />
+                    <img src="_RoomTemp.svg" alt="err" />
                 </button>
                 <button onClick={handleHotClick}>
-                    <img src="hot.png" alt="err" />
+                    <img src="_Hot.svg" alt="err" />
                 </button>
             </div>
         </div>

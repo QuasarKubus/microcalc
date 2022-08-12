@@ -36,18 +36,22 @@ export const Power = (props: Props) => {
             <h3>Power (W)</h3>
             <div className="ValueSetter">
                 <input onChange={handlePowerChange} value={props.power} type="number" min="0" step="50"/>
-                <button className="PMButton" onClick={handlePowerIncrease}>+</button>
-                <button className="PMButton" onClick={handlePowerDecrease}>-</button>
+                <button className="PMButton" onClick={handlePowerIncrease}>
+                    <img src="_Plus.svg" alt="err" />
+                </button>
+                <button className="PMButton" onClick={handlePowerDecrease}>
+                    <img src="_Minus.svg" alt="err" />
+                </button>
             </div>
             <div className="QuickClick">
                 <button onClick={handleEnergy1Click}>
-                    <img src="energy1.png" alt="err" />
+                    <img src="_Power1.svg" alt="err" />
                 </button>
                 <button onClick={handleEnergy2Click}>
-                    <img src="energy2.png" alt="err" />
+                    <img src="_Power2.svg" alt="err" />
                 </button>
                 <button onClick={handleEnergy3Click}>
-                    <img src="energy3.png" alt="err" />
+                    <img src="_Power3.svg" alt="err" />
                 </button>
             </div>
         </div>

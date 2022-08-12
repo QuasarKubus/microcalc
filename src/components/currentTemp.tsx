@@ -32,15 +32,19 @@ export const CurrentTemp = (props: Props) => {
             <h3>Current Temperature (°C)</h3>
             <div className="ValueSetter">
                 <input onChange={handleCTempChange} value={props.cTemp} type="number" min="0" />
-                <button className="PMButton" onClick={handleCTempIncrease}>+</button>
-                <button className="PMButton" onClick={handleCTempDecrease}>-</button>
+                <button className="PMButton" onClick={handleCTempIncrease}>
+                    <img src="_Plus.svg" alt="err" />
+                </button>
+                <button className="PMButton" onClick={handleCTempDecrease}>
+                    <img src="_Minus.svg" alt="err" />
+                </button>
             </div>
             <div className="QuickClick">
                 <button onClick={handleColdClick}>
-                    <img src="cold.png" alt="err" />
+                    <img src="_Cold.svg" alt="err" />
                 </button>
                 <button onClick={handleRoom1Click}>
-                    <img src="roomtmp.png" alt="err" />
+                    <img src="_RoomTemp.svg" alt="err" />
                 </button>
             </div>
         </div>

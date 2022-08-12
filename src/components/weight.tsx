@@ -1,5 +1,4 @@
 import React, { ChangeEvent } from "react";
-import { preProcessFile } from "typescript";
 
 interface Props {
     weight: number,
@@ -33,15 +32,19 @@ export const Weight = (props: Props) => {
             <h3>Weight (g) </h3>
             <div className="ValueSetter">
                 <input onChange={handleWeightChange} value={props.weight} type="number" min="0" max="500" step="50"/>
-                <button className="PMButton" onClick={handlePortionIncrease}>+</button>
-                <button className="PMButton" onClick={handlePortionDecrease}>-</button>
+                <button className="PMButton" onClick={handlePortionIncrease}>
+                    <img src="_Plus.svg" alt="err" />
+                </button>
+                <button className="PMButton" onClick={handlePortionDecrease}>
+                    <img src="_Minus.svg" alt="err" />
+                </button>
             </div>
             <div className="QuickClick">
                 <button onClick={handleCupPress}>
-                    <img src="cup.png" alt="err" />
+                    <img src="_Cup.svg" alt="err" />
                 </button>
                 <button onClick={handlePortionPress}>
-                    <img src="portion.png" alt="err" />
+                    <img src="_Serving.svg" alt="err" />
                 </button>
             </div>
         </div>

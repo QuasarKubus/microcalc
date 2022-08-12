@@ -3,11 +3,10 @@
   "name": "MicroCalc Microwave Calculator",
   "icons": [
     {
-      "src": "icon256.png",
-      "type": "image/png",
-      "sizes": "256x256"
+      "src": "_Logo.svg",
+      "sizes": "any"
     }
   ],
   "start_url": ".",
-  "display": "standalone",
+  "display": "fullscreen"
 }

@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {useState} from 'react';
 import { DesiredTemp } from './components/desiredTemp';
 import { CurrentTemp } from './components/currentTemp';
 import { Weight } from './components/weight';
@@ -26,7 +26,6 @@ const App = () => {
   }
 
   const asTime = (seconds:number) => {
-    console.log(seconds);
     return (seconds/60.0).toFixed(0).padStart(2, "0") + ":" + (seconds%60).toFixed(0).padStart(2, "0");
   }
 

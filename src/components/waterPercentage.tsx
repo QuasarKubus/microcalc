@@ -39,24 +39,28 @@ export const WaterPercentage = (props: Props) => {
             <h3>Water Ratio (%)</h3>
             <div className="ValueSetter">
                 <input onChange={handleWaterPercentageChange} value={props.waterPercentage} type="number" min="0" max="100" step="5" list="ratio"/>
-                <button className="PMButton" onClick={handleWaterIncrease}>+</button>
-                <button className="PMButton" onClick={handleWaterDecrease}>-</button>
+                <button className="PMButton" onClick={handleWaterIncrease}>
+                    <img src="_Plus.svg" alt="err" />
+                </button>
+                <button className="PMButton" onClick={handleWaterDecrease}>
+                    <img src="_Minus.svg" alt="err" />
+                    </button>
             </div>
             <div>
                 <div className="QuickClick">
                     <button onClick={handleVeggiePress}>
-                        <img src="veggie.png" alt="err" />
+                        <img src="_Vegetable.svg" alt="err" />
                     </button>
                     <button onClick={handleMeatPress}>
-                        <img src="meat.png" alt="err" />
+                        <img src="_Meat.svg" alt="err" />
                     </button>
                 </div>
                 <div className="QuickClick">
                     <button onClick={handlePastaPress}>
-                        <img src="pasta.png" alt="err" />
+                        <img src="_Pasta.svg" alt="err" />
                     </button>
                     <button onClick={handleSoupPress}>
-                        <img src="soup.png" alt="err" />
+                        <img src="_Soup.svg" alt="err" />
                     </button>
                 </div>
             </div>
