@@ -26,23 +26,39 @@ export const WaterPercentage = (props: Props) => {
         props.setWaterPercentage(95);
     }
 
+    const handleWaterIncrease = (event: React.MouseEvent<HTMLButtonElement>) => {
+        props.setWaterPercentage(props.waterPercentage+5);
+    }
+
+    const handleWaterDecrease = (event: React.MouseEvent<HTMLButtonElement>) => {
+        props.setWaterPercentage(props.waterPercentage-5);
+    }
+
     return (          
         <div className="InputGroup">
             <h3>Water Ratio (%)</h3>
-            <input onChange={handleWaterPercentageChange} value={props.waterPercentage} type="number" min="0" max="100" step="5" list="ratio"/>
-            <div className="QuickClick">
-                <button onClick={handleVeggiePress}>
-                    <img src="veggie.png" alt="err" />
-                </button>
-                <button onClick={handleMeatPress}>
-                    <img src="meat.png" alt="err" />
-                </button>
-                <button onClick={handlePastaPress}>
-                    <img src="pasta.png" alt="err" />
-                </button>
-                <button onClick={handleSoupPress}>
-                    <img src="soup.png" alt="err" />
-                </button>
+            <div className="ValueSetter">
+                <input onChange={handleWaterPercentageChange} value={props.waterPercentage} type="number" min="0" max="100" step="5" list="ratio"/>
+                <button className="PMButton" onClick={handleWaterIncrease}>+</button>
+                <button className="PMButton" onClick={handleWaterDecrease}>-</button>
+            </div>
+            <div>
+                <div className="QuickClick">
+                    <button onClick={handleVeggiePress}>
+                        <img src="veggie.png" alt="err" />
+                    </button>
+                    <button onClick={handleMeatPress}>
+                        <img src="meat.png" alt="err" />
+                    </button>
+                </div>
+                <div className="QuickClick">
+                    <button onClick={handlePastaPress}>
+                        <img src="pasta.png" alt="err" />
+                    </button>
+                    <button onClick={handleSoupPress}>
+                        <img src="soup.png" alt="err" />
+                    </button>
+                </div>
             </div>
         </div>
     )

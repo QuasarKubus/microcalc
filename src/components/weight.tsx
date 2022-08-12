@@ -1,4 +1,5 @@
 import React, { ChangeEvent } from "react";
+import { preProcessFile } from "typescript";
 
 interface Props {
     weight: number,
@@ -16,13 +17,25 @@ export const Weight = (props: Props) => {
     }
 
     const handlePortionPress = (event: React.MouseEvent<HTMLButtonElement>) =>{
-        props.setWeight(350);
+        props.setWeight(500);
+    }
+
+    const handlePortionIncrease = (event: React.MouseEvent<HTMLButtonElement>) => {
+        props.setWeight(props.weight+50);
+    }
+
+    const handlePortionDecrease = (event: React.MouseEvent<HTMLButtonElement>) => {
+        props.setWeight(props.weight-50);
     }
 
     return (
         <div className="InputGroup">
             <h3>Weight (g) </h3>
-            <input onChange={handleWeightChange} value={props.weight} type="number" min="0" max="500" step="50"/>
+            <div className="ValueSetter">
+                <input onChange={handleWeightChange} value={props.weight} type="number" min="0" max="500" step="50"/>
+                <button className="PMButton" onClick={handlePortionIncrease}>+</button>
+                <button className="PMButton" onClick={handlePortionDecrease}>-</button>
+            </div>
             <div className="QuickClick">
                 <button onClick={handleCupPress}>
                     <img src="cup.png" alt="err" />

@@ -23,10 +23,22 @@ export const Power = (props: Props) => {
         props.setPower(1000);
     }
 
+    const handlePowerIncrease = (event: React.MouseEvent<HTMLButtonElement>) => {
+        props.setPower(props.power+50);
+    }
+
+    const handlePowerDecrease = (event: React.MouseEvent<HTMLButtonElement>) => {
+        props.setPower(props.power-50);
+    }
+
     return (
         <div className="InputGroup">
             <h3>Power (W)</h3>
-            <input onChange={handlePowerChange} value={props.power} type="number" min="0" step="50"/>
+            <div className="ValueSetter">
+                <input onChange={handlePowerChange} value={props.power} type="number" min="0" step="50"/>
+                <button className="PMButton" onClick={handlePowerIncrease}>+</button>
+                <button className="PMButton" onClick={handlePowerDecrease}>-</button>
+            </div>
             <div className="QuickClick">
                 <button onClick={handleEnergy1Click}>
                     <img src="energy1.png" alt="err" />
