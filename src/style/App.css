@@ -15,12 +15,12 @@
 
 .Imprint {
   text-align: start;
-  margin: 20px;
+  padding: 20px;
 }
 
 .Privacy {
   text-align: start;
-  margin: 20px;
+  padding: 20px;
 }
 
 #calcContainer {
@@ -60,10 +60,12 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+  border-radius: 5px;
 }
 
 button {
   aspect-ratio: 1;
+  border-radius: 10px;
   background-color: #ffffff;
   border: #c6402c solid 5px;
 }
