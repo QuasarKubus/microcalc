@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   color: white;
   min-height: 100vh;
   padding-bottom: 50px;
@@ -21,6 +20,10 @@
 .Privacy {
   text-align: start;
   padding: 20px;
+}
+
+.Info {
+  max-width: 50vw;
 }
 
 #calcContainer {
@@ -107,6 +110,10 @@ a {
 
 @media screen and (max-width: 800px){
   #calcContainer {
+    width: 100%;
+    max-width: none;
+  }
+  .Info {
     width: 100%;
     max-width: none;
   }

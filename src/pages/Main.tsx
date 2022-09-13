@@ -5,6 +5,7 @@ import { Weight } from '../components/weight';
 import { WaterPercentage } from '../components/waterPercentage';
 import { Power } from '../components/power';
 import { MyFooter } from '../components/myFooter';
+import { Link } from 'react-router-dom';
 
 export const Main = () => {
 
@@ -32,10 +33,6 @@ export const Main = () => {
 
   return (
     <div id='calcContainer'>
-      <div className='Title'>
-        <h1>CalcoWave</h1>
-        <h3>Microwave Time Calculator</h3>
-      </div>
       <div id='inputContainer'>
         <Power power={power} setPower={setPower} />
         <Weight weight={weight} setWeight={setWeight} />
@@ -44,7 +41,6 @@ export const Main = () => {
         <DesiredTemp  dTemp={dTemp} setDTemp={setDTemp} />
       </div>
       <h1>{asTime(calculateTime(power, weight, waterPercentage, cTemp, dTemp))}</h1>
-      <MyFooter></MyFooter>
     </div>
   );
 }
