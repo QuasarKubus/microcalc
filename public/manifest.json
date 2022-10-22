@@ -1,12 +1,13 @@
 {
   "short_name": "CalcoWave",
   "name": "MicroCalc Microwave Calculator",
-  "icons": [
-    {
-      "src": "_Logo.svg",
-      "sizes": "any"
-    }
-  ],
+  "author": "Janik Teege",
+  "icons": {
+    "48": "_Logo.svg",
+    "96": "_Logo.svg",
+    "256": "_Logo.svg",
+    "512": "_Logo.svg"
+  },
   "start_url": ".",
   "display": "fullscreen"
 }

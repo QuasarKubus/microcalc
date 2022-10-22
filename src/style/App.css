@@ -15,14 +15,18 @@
 .Imprint {
   text-align: start;
   padding: 20px;
+  max-width: 50vw;
 }
 
 .Privacy {
   text-align: start;
   padding: 20px;
+  max-width: 50vw;
 }
 
 .Info {
+  text-align: start;
+  padding: 20px;
   max-width: 50vw;
 }
 
