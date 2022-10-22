@@ -119,6 +119,17 @@ a {
   }
   .Info {
     width: 100%;
+    padding: 5px;
+    max-width: none;
+  }
+  .Imprint {
+    width: 100%;
+    padding: 5px;
+    max-width: none;
+  }
+  .Privacy {
+    width: 100%;
+    padding: 5px;
     max-width: none;
   }
 }
